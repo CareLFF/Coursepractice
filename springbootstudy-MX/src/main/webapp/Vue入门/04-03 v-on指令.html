@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>v-on指令</title>
+</head>
+<body>
+<div id="app">
+  <input type="button" value="单击" v-on:click='doSomething'>
+  <input type="button" value="双击" v-on:dblclick='doSomething'>
+  <input type="button" value="滑过" v-on:mouseover='doSomething'>
+
+  <!--v-on指令简写-->
+  <input type="button" value="单击" @click='doSomething'>
+  <input type="button" value="双击" @dblclick='doSomething'>
+  <input type="button" value="滑过" @mouseover='doSomething'>
+  <br>
+  <input type="button" value="改变html内容" @click='changeVal'>{{content}}
+</div>
+
+<!--引入vue.js-->
+<script src="../static/vue/vue.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      content: 'hbxy'
+    },
+    methods: {
+      doSomething: function () {
+        console.log("事件触发");
+      },
+      changeVal: function () {
+        this.content += '海滨学院';
+      }
+    }
+  })
+</script>
+</body>
+</html>

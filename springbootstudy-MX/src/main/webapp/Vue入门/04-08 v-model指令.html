@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>v-model指令</title>
+</head>
+<body>
+<div id="app">
+  <form>
+    姓名<input type="text" v-model="student.name">
+    <br>
+    年龄<input type="text" v-model="student.age">
+    <br>
+    <input
+      type="button" value="改变模型值" @click='changeVal'>
+  </form>
+  <br>从模型取值显示:
+  <br>{{ student.name }}
+  <br>{{ student.age }}
+
+</div>
+
+<!--引入vue.js-->
+<script src="../static/vue/vue.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      student: {
+        name: '张三',
+        age: '20'
+      }
+    },
+    methods: {
+      changeVal: function () {
+        this.student.name = '李四';
+        this.student.age = '21';
+      }
+    }
+  })
+</script>
+</body>
+</html>

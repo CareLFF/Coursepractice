@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout 布局</title>
+  <!-- 引入样式 -->
+  <link rel="stylesheet"
+        href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <style>
+    .el-row {
+      margin-bottom: 20px;
+    }
+
+    .el-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .el-col {
+      border-radius: 4px;
+    }
+
+    .bg-purple-dark {
+      background: #99a9bf;
+    }
+
+    .bg-purple {
+      background: #d3dce6;
+    }
+
+    .bg-purple-light {
+      background: #e5e9f2;
+    }
+
+    .grid-content {
+      border-radius: 4px;
+      min-height: 36px;
+    }
+
+    .row-bg {
+      padding: 10px 0;
+      background-color: #f9fafc;
+    }
+  </style>
+
+
+</head>
+<body>
+<!--所有element元素都必须在vue实例里面-->
+<div id="app">
+  <el-button plain>朴素按钮</el-button>
+  <el-button type="primary" plain>主要按钮</el-button>
+  <el-button type="success" plain>成功按钮</el-button>
+  <el-button type="info" plain>信息按钮</el-button>
+  <el-button type="warning" plain>警告按钮</el-button>
+  <el-button type="danger" plain>危险按钮</el-button>
+
+</div>
+<!-- 引入 Vue -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<script>
+  //Element-UI基于Vue，数据，逻辑处理都由Vue负责
+  var app = new Vue({
+    el: '#app',
+    data: function () {
+      return {
+        visible: false
+      }
+    }
+  })
+</script>
+</body>
+</html>

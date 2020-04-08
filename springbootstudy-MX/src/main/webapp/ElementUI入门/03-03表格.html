@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>表格</title>
+  <!-- 引入样式 -->
+  <link rel="stylesheet"
+        href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+<!--所有element元素都必须在vue实例里面-->
+<div id="app">
+  <el-table
+      :data="tableData"
+      style="width: 100%">
+    <el-table-column
+        prop="name"
+        label="姓名"
+        width="180">
+    </el-table-column>
+    <el-table-column
+        prop="address"
+        label="地址">
+    </el-table-column>
+  </el-table>
+</div>
+<!-- 引入 Vue -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<script>
+  //Element-UI基于Vue，数据，逻辑处理都由Vue负责
+  var app = new Vue({
+    el: '#app',
+    data: function () {
+      return {
+        tableData: [{
+          date: '2016-05-02',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          date: '2016-05-04',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1517 弄'
+        }]
+      }
+    }
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>v-show指令</title>
+</head>
+<body>
+<div id="app">
+  <input type="button" value="显示或隐藏图片" @click='doSomething'>
+  <br>
+  <img v-show="isShow" src="https://www.bjtuhbxy.edu.cn/img/logo.jpg">
+</div>
+
+<!--引入vue.js-->
+<script src="../static/vue/vue.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      isShow: true
+    },
+    methods: {
+      doSomething: function () {
+        this.isShow = !this.isShow;
+      }
+    }
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>v-if指令</title>
+</head>
+<body>
+<div id="app">
+  <table width="400" border="1">
+    <tr>
+      <td>姓名</td>
+      <td>性别</td>
+    </tr>
+    <tr>
+      <td>张三</td>
+      <td>
+        <span v-if="sex==0">男</span>
+        <span v-if="sex==1">女</span></td>
+    </tr>
+    <tr>
+      <td>李四</td>
+      <td>
+        <span v-if="sex==0">男</span>
+        <span v-if="sex==1">女</span>
+      </td>
+    </tr>
+
+  </table>
+  <input type="button" value="改变性别" @click='doSomething'>
+
+</div>
+
+<!--引入vue.js-->
+<script src="../static/vue/vue.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      sex: 0
+    }, methods: {
+      doSomething: function () {
+        if (this.sex == 0) {
+          this.sex = 1;
+        } else {
+          this.sex = 0;
+        }
+      }
+    }
+  })
+</script>
+</body>
+</html>

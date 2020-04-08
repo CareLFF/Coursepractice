@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快速上手</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+<!--所有element元素都必须在vue实例里面-->
+<div id="app">
+    <!--Element 按钮-->
+    <el-button @click="visible = true">
+        按钮
+    </el-button>
+    <!--Element 对话框-->
+    <el-dialog :visible.sync="visible"
+               title="Hello world">
+        <p>试一试Element</p>
+    </el-dialog>
+</div>
+<!-- 引入 Vue -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<script>
+    //Element-UI基于Vue，数据，逻辑处理都由Vue负责
+    var app = new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                visible: false
+            }
+        }
+    })
+</script>
+</body>
+</html>
+

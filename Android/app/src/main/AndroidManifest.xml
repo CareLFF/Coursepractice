@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.caresyx.myhometown2">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/zjk_dhhs"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/zjk_dhhs"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.lff.myhometown_a.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.lff.myhometown_a.Menua"/>
+        <activity android:name="com.lff.myhometown_a.Txtzjk"/>
+        <activity android:name="com.lff.myhometown_a.Piczjk"/>
+        <activity android:name="com.lff.myhometown_a.Mvzjk"/>
+
+    </application>
+
+</manifest>

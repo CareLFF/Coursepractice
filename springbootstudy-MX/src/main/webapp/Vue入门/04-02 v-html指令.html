@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>v-html指令</title>
+</head>
+<body>
+<div id="app">
+  <h2 v-text="content"></h2>
+  <h2 >{{ content }}</h2>
+  <h2 v-html="content"></h2>
+</div>
+
+<!--引入vue.js-->
+<script src="../static/vue/vue.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      content: '<a href="https://www.bjtuhbxy.edu.cn/">海滨学院</a>'
+    }
+  })
+</script>
+</body>
+</html>

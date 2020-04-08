@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>v-for指令</title>
+</head>
+<body>
+<div id="app">
+  <table width="400" border="1">
+    <tr>
+      <td>姓名</td>
+      <td>性别</td>
+    </tr>
+    <tr v-for="item in students">
+      <td>{{ item.name }}</td>
+      <td> <span v-if="item.sex==0">男</span>
+        <span v-if="item.sex==1">女</span>
+      </td>
+    </tr>
+  </table>
+  <!--使用索引占位-->
+  <table width="400" border="1">
+    <tr>
+      <td></td>
+      <td>姓名</td>
+      <td>性别</td>
+    </tr>
+    <tr v-for="(item,index) in students">
+      <td>{{index+1}}</td>
+      <td>{{ item.name }}</td>
+      <td> <span v-if="item.sex==0">男</span>
+        <span v-if="item.sex==1">女</span>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!--引入vue.js-->
+<script src="../static/vue/vue.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      students: [
+        {name: '张三', sex: '0'},
+        {name: '李四', sex: '1'},
+        {name: '王五', sex: '0'}
+      ]
+    },
+    methods: {}
+  })
+</script>
+</body>
+</html>

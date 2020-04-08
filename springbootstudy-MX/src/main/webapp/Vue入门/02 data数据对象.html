@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>data数据对象</title>
+</head>
+<body>
+<div id="app">
+  {{message}}
+  <h2>
+    {{school.name}} {{school.address}}
+  </h2>
+  <ul>
+    <li>{{institute[0]}}</li>
+    <li>{{institute[1]}}</li>
+    <li>{{institute[2]}}</li>
+    <li>{{institute[3]}}</li>
+  </ul>
+
+</div>
+
+<!--引入vue.js-->
+<script src="../static/vue/vue.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: '你好!',
+      school: {
+        name: '海滨学院',
+        address: '河北黄骅'
+      },
+      institute: ['计科', '土木', '经管', '机械']
+    }
+  })
+</script>

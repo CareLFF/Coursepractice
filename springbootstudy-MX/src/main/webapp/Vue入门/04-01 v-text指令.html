@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>v-text指令</title>
+</head>
+<body>
+<div id="app">
+  <h2 v-text="content + '在黄骅'"></h2>
+  <h2 v-text="content + '在黄骅'">学校名称</h2>
+  <h2 >学校:{{ content + '在黄骅'}}</h2>
+</div>
+
+
+<!--引入vue.js-->
+<script src="../static/vue/vue.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      content: '海滨学院'
+    }
+  })
+</script>
+</body>
+</html>
